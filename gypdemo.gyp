@@ -14,9 +14,10 @@
       'dependencies': [
 		#增加依赖
 	  'hello/hello.gyp:hello',
-	  'hello-jni/hello-jni.gyp:hello_jni',
+	  'hello-jni/hello-jni.gyp:hello_jni_headers',
+	  'hello-jar/hello-jar.gyp:hello_jar',	
 	  'hello-apk/hello-apk.gyp:hello_apk',
-	  #'hello-jar/hello-jar.gyp:hello_jar',	
+	  'hello-apk-with-jni/hello-apk-with-jni.gyp:hello_apk_with_jni'
       ],
     },
   ],

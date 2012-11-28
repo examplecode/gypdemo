@@ -8,22 +8,16 @@
     'var_name': 'vaule',
   },
   'targets': [
-    {
-      'target_name': 'hello_jni',
-      'type': 'shared_library',
-      'include_dirs': [
-        '../..',
-        '<(SHARED_INTERMEDIATE_DIR)/sample/hello-jni',
-      ],
-      'sources': [
-        'hello-jni.c',
-        'hello-jni.h',
-	  	'src/com/mx/example/hello_jni/Hello.java',
-      ],
-	  'variables': {
-		'jni_gen_dir':'sample/hello-jni',
-	  },
-	  'includes':['../../build/jni_generator.gypi'],
+  	{
+    'target_name': 'hello_jni_headers',
+    'type': 'none',
+    'sources': [
+      'src/com/mx/example/hello_jni/Hello.java',
+    ],
+    'variables': {
+      'jni_gen_dir': 'hello_jni',
     },
+    'includes': [ '../../build/jni_generator.gypi' ],
+  	},
   ],
 }
