@@ -8,7 +8,6 @@
 4. hello-apk 构建一个apk包
 5. hello-apk-with-jni 构建一个使用jni模块的apk
 
-
 ## 使用方法: ##
 
 
@@ -26,4 +25,15 @@
 
 2. 编译生成目标
 	make hello
+
+
+
+## 通用的GYP使用方法 ##
+
+mylib-gyp 示范不依赖chromium构建环境，只使用gyp构建 (确认gyp命令已经在你的环境变量中生效)
+
+	cd mylib-gyp
+	gyp mylib.gyp --depth=./ -fmake
+	make main
+
 
